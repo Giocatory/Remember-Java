@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 
 public class TypesInJava {
+    /**
+     * java types
+     */
     private final ArrayList<String> arrayList = new ArrayList<String>();
 
     public TypesInJava() {
