@@ -1,11 +1,11 @@
 package Classes_and_Objects;
 
-public class Box {
+public final class Box {
     private double width;
     private double height;
     private double depth;
 
-    // constructor
+    // constructors
     public Box(double width, double height, double depth) {
         this.width = width;
         this.height = height;
@@ -17,6 +17,18 @@ public class Box {
         this.depth = 1;
     }
 
+    public Box(double length){
+        this.width = length;
+        this.height = length;
+        this.depth = length;
+    }
+
+    public Box(Box box) {
+        this.width = box.width;
+        this.height = box.height;
+        this.depth = box.depth;
+    }
+
     // methods
     public double volume() {
         return width * height * depth;
@@ -26,6 +38,10 @@ public class Box {
         this.width = width;
         this.height = height;
         this.depth = depth;
+    }
+
+    public boolean equalTo(Box box) {
+        return box.getWidth() == this.getWidth() && box.getHeight() == this.getHeight() && box.getDepth() == this.getDepth();
     }
 
     // overrides
