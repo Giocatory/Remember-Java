@@ -40,7 +40,7 @@ public final class Box {
         this.depth = depth;
     }
 
-    public boolean equalTo(Box box) {
+    public boolean equalTo(@org.jetbrains.annotations.NotNull Box box) {
         return box.getWidth() == this.getWidth() && box.getHeight() == this.getHeight() && box.getDepth() == this.getDepth();
     }
 
